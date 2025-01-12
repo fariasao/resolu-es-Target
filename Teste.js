@@ -148,3 +148,18 @@ for (const estado in faturamento) {
 // IMPORTANTE:
 // a) Essa string pode ser informada através de qualquer entrada de sua preferência ou pode ser previamente definida no código;
 // b) Evite usar funções prontas, como, por exemplo, reverse;
+
+function stringInverter(str) {
+    let invertida = "";
+    for (let i = str.length - 1; i >= 0; i--) { 
+        invertida += str[i];
+    }
+    return invertida;
+}
+
+// String que será invertida
+const stringOriginal = "Passei no Desafio Target!";
+
+// Mostra a string invertida
+console.log("String original:", stringOriginal);
+console.log("String invertida:", stringInverter(stringOriginal));
