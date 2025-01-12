@@ -125,6 +125,23 @@ console.log(`Número de dias com faturamento acima da média: ${diasAcimaDaMedia
 // * Outros – R$19.849,53
 
 // Escreva um programa na linguagem que desejar onde calcule o percentual de representação que cada estado teve dentro do valor total mensal da distribuidora.  
+// Dados do faturamento mensal por estado
+
+const faturamento = {
+    SP: 67836.43,
+    RJ: 36678.66,
+    MG: 29229.88,
+    ES: 27165.48,
+    Outros: 19849.53
+};
+
+// Para calcular o total
+const faturamentoTotal = Object.values(faturamento).reduce((soma, valor) => soma + valor, 0);
+
+for (const estado in faturamento) {
+    const percentual = (faturamento[estado] / faturamentoTotal) * 100;
+    console.log(`${estado}: ${percentual.toFixed(2)}%`);
+}
 
 // 5) Escreva um programa que inverta os caracteres de um string.
 
