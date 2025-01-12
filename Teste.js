@@ -19,6 +19,32 @@ console.log("O valor de SOMA é:", SOMA);
 
 // IMPORTANTE: Esse número pode ser informado através de qualquer entrada de sua preferência ou pode ser previamente definido no código;
 
+function isFibonacci(num) {
+    let a = 0;
+    let b = 1;
+
+    if (num === a || num === b) return true;
+
+    let c = a + b;
+
+    while (c <= num) {
+        if (c === num) return true;
+        a = b;
+        b = c;
+        c = a + b;
+    }
+    return false;
+}
+
+// aqui definimos o número que queremos verificar se pertence à sequência de Fibonacci
+const numberToCheck = 55;
+
+if (isFibonacci(numberToCheck)) {
+    console.log(`${numberToCheck} pertence à sequência de Fibonacci.`);
+} else {
+    console.log(`${numberToCheck} não pertence à sequência de Fibonacci.`);
+}
+
 // 3) Dado um vetor que guarda o valor de faturamento diário de uma distribuidora, faça um programa, na linguagem que desejar, que calcule e retorne:
 // * O menor valor de faturamento ocorrido em um dia do mês;
 // * O maior valor de faturamento ocorrido em um dia do mês;
